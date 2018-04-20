@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>New Card Form</title>
+</head>
+<body>
+	<h1>New Card Form</h1>
+	<form th:object="${card}" th:action="@{/card-save}" th:method="post">
+		<input type="hidden" th:field="*{id}"/>
+		Name:<br>
+		<input type="text" th:field="*{name}"/><br>
+		URL:<br>
+		<input type="text" th:field="*{url}"/><br>
+		Price:<br>
+		<input type="text" th:field="*{price}"/><br>
+		<input type="submit"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+net/h3lv4ul7/mtgodyssey/MtgOdysseyApplication.class
+net/h3lv4ul7/mtgodyssey/service/CardServiceImpl.class
+net/h3lv4ul7/mtgodyssey/controller/CardController.class
+net/h3lv4ul7/mtgodyssey/repository/CardRepository.class
+net/h3lv4ul7/mtgodyssey/model/Card.class
+net/h3lv4ul7/mtgodyssey/service/CardService.class

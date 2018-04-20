@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: net.h3lv4ul7.mtgodyssey.MtgOdysseyApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.474 s - in net.h3lv4ul7.mtgodyssey.MtgOdysseyApplicationTests

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Card List</title>
+</head>
+<body>
+	<h1>Card List</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>URL</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="card : ${cards}">
+				<td th:text="${card.id}"/>
+				<td th:text="${card.name}"/>
+				<td th:text="${card.url}"/>
+				<td th:text="${card.price}"/>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
