@@ -25,7 +25,7 @@ public class CardController {
 	@PostMapping("/card-save")
 	public String saveCard (Card card){
 		cardService.saveCard(card);
-		return "redirect:/all-cards";
+		return "redirect:/card-list";
 		
 	}
 	
