@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
@@ -13,22 +14,17 @@ import javax.persistence.Table;
 public class Card {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
+	
 	private String name;
+	private String edition;
 	private String url;
 	private BigDecimal price;
 	
-	public Card() {
-	}
-
-	public Card(String name, String url, BigDecimal price) {
-		super();
-		this.name = name;
-		this.url = url;
-		this.price = price;
-	}
-
+	@Lob
+	private String testprice;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -43,6 +39,14 @@ public class Card {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getEdition() {
+		return edition;
+	}
+
+	public void setEdition(String edition) {
+		this.edition = edition;
 	}
 
 	public String getUrl() {

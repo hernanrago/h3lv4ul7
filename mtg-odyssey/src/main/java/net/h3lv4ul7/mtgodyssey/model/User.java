@@ -1,9 +1,13 @@
 package net.h3lv4ul7.mtgodyssey.model;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -11,12 +15,18 @@ import javax.persistence.Table;
 public class User {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String fullName;
 	private String email;
 	private String username;
 	private String password;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="chargeUser")
+	private Set<Stock> stockCharged;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="saleUser")
+	private Set<Stock> stockSold;
 	
 	public User() {
 		super();

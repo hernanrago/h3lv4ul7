@@ -1,9 +1,12 @@
 package net.h3lv4ul7.mtgodyssey.model;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +20,9 @@ public class Customer {
 	private String email;
 	private String username;
 	private String password;
+	
+	@OneToMany
+	private Set<Stock> purchasedStock;
 	
 	public Customer() {
 		super();

@@ -1,8 +1,10 @@
 package guru.springframework.controllers;
 
-import guru.springframework.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
+
+import h3lv4ul7.springframework.controllers.ConstructorInjectedController;
+import h3lv4ul7.springframework.services.GreetingServiceImpl;
 
 import static org.junit.Assert.assertEquals;
 
